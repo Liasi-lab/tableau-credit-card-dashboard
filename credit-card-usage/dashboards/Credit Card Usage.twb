@@ -1,0 +1,2381 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='CreditCardUsage_17911914509880' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='UCI_Credit_Card_RP' inline='true' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='UCI_Credit_Card_RP' name='textscan.0i630580zbp8o31gx3czr086jr1f'>
+            <connection class='textscan' directory='C:/Users/v/OneDrive - Bina Nusantara/Coolyeah/Semester 5 - Periode 2/Business Intelligence/Tugas' filename='UCI_Credit_Card_RP.csv' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation name='Pivot' type='pivot'>
+          <columns>
+            <column datatype='string' name='Pivot Field Names' />
+            <column datatype='integer' name='Pivot Field Values' />
+          </columns>
+          <tag name='Pivot Field Names'>
+            <value name='[Pay 0]' />
+            <value name='[Pay 2]' />
+            <value name='[Pay 3]' />
+            <value name='[Pay 4]' />
+            <value name='[Pay 5]' />
+            <value name='[Pay 6]' />
+          </tag>
+          <groups>
+            <group name='Pivot Field Values'>
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_0]' />
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_2]' />
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_3]' />
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_4]' />
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_5]' />
+              <field name='[UCI_Credit_Card_RP.csv].[PAY_6]' />
+            </group>
+          </groups>
+          <relation connection='textscan.0i630580zbp8o31gx3czr086jr1f' name='UCI_Credit_Card_RP.csv' table='[UCI_Credit_Card_RP#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='ID' ordinal='0' />
+              <column datatype='real' name='LIMIT_BAL' ordinal='1' />
+              <column datatype='integer' name='SEX' ordinal='2' />
+              <column datatype='integer' name='EDUCATION' ordinal='3' />
+              <column datatype='integer' name='MARRIAGE' ordinal='4' />
+              <column datatype='integer' name='AGE' ordinal='5' />
+              <column datatype='integer' name='PAY_0' ordinal='6' />
+              <column datatype='integer' name='PAY_2' ordinal='7' />
+              <column datatype='integer' name='PAY_3' ordinal='8' />
+              <column datatype='integer' name='PAY_4' ordinal='9' />
+              <column datatype='integer' name='PAY_5' ordinal='10' />
+              <column datatype='integer' name='PAY_6' ordinal='11' />
+              <column datatype='real' name='BILL_AMT1' ordinal='12' />
+              <column datatype='real' name='BILL_AMT2' ordinal='13' />
+              <column datatype='real' name='BILL_AMT3' ordinal='14' />
+              <column datatype='real' name='BILL_AMT4' ordinal='15' />
+              <column datatype='real' name='BILL_AMT5' ordinal='16' />
+              <column datatype='real' name='BILL_AMT6' ordinal='17' />
+              <column datatype='real' name='PAY_AMT1' ordinal='18' />
+              <column datatype='real' name='PAY_AMT2' ordinal='19' />
+              <column datatype='real' name='PAY_AMT3' ordinal='20' />
+              <column datatype='real' name='PAY_AMT4' ordinal='21' />
+              <column datatype='real' name='PAY_AMT5' ordinal='22' />
+              <column datatype='real' name='PAY_AMT6' ordinal='23' />
+              <column datatype='integer' name='default.payment.next.month' ordinal='24' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LIMIT_BAL</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LIMIT_BAL]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>LIMIT_BAL</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SEX</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SEX]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>SEX</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EDUCATION</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EDUCATION]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>EDUCATION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MARRIAGE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MARRIAGE]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>MARRIAGE</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AGE]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>AGE</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT1]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT2]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT2</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT3]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT3</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT4</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT4]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT4</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT5</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT5]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT5</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BILL_AMT6</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BILL_AMT6]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>BILL_AMT6</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT1]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT1</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT2]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT2</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT3]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT3</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT4</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT4]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT4</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT5</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT5]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT5</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PAY_AMT6</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PAY_AMT6]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>PAY_AMT6</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>default.payment.next.month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[default.payment.next.month]</local-name>
+            <parent-name>[UCI_Credit_Card_RP.csv]</parent-name>
+            <remote-alias>default.payment.next.month</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[avg:LIMIT_BAL:qk]&quot;' value='Avg. Limit Kredit' />
+          <alias key='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:ID:qk]&quot;' value='Status Payment' />
+          <alias key='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk:4]&quot;' value='% of Clients' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[AGE]' role='measure' type='quantitative' />
+      <column caption='Bill Amt1' datatype='real' name='[BILL_AMT1]' role='measure' type='quantitative' />
+      <column caption='Bill Amt2' datatype='real' name='[BILL_AMT2]' role='measure' type='quantitative' />
+      <column caption='Bill Amt3' datatype='real' name='[BILL_AMT3]' role='measure' type='quantitative' />
+      <column caption='Bill Amt4' datatype='real' name='[BILL_AMT4]' role='measure' type='quantitative' />
+      <column caption='Bill Amt5' datatype='real' name='[BILL_AMT5]' role='measure' type='quantitative' />
+      <column caption='Bill Amt6' datatype='real' name='[BILL_AMT6]' role='measure' type='quantitative' />
+      <column caption='Default rate' datatype='real' name='[Calculation_2173251818336256]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [default.payment.next.month] = 1 THEN 1 ELSE 0 END) &#13;&#10;/ &#13;&#10;COUNT([ID])' />
+      </column>
+      <column caption='Avg Credit Limit' datatype='real' default-format='*Rp #,##0,, &quot;jt&quot;;-&quot;Rp #,##0,,, &quot;M&quot;' name='[Calculation_2173251818893313]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([LIMIT_BAL])' />
+      </column>
+      <column caption='Risk Tier' datatype='string' name='[Calculation_2173251829891075]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Pivot Field Values] &lt;= -1 THEN &quot;On time / early&quot;&#13;&#10;ELSEIF [Pivot Field Values] = 0 THEN &quot;Partially paid&quot;&#13;&#10;ELSEIF [Pivot Field Values] &lt;= 2 THEN &quot;1–2 mo delay&quot;&#13;&#10;ELSE &quot;3+ mo delay&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Risk Order' datatype='integer' name='[Calculation_2173251829964804]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_2173251829891075] = &quot;On time / early&quot; THEN 1&#13;&#10;ELSEIF [Calculation_2173251829891075] = &quot;Partially paid&quot; THEN 2&#13;&#10;ELSEIF [Calculation_2173251829891075] = &quot;1–2 mo delay&quot; THEN 3&#13;&#10;ELSE 4&#13;&#10;END' />
+      </column>
+      <column caption='% of Clients' datatype='real' name='[Calculation_2173251830030341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([ID]) / TOTAL(COUNT([ID]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Client Count' datatype='integer' name='[Calculation_2173251835830284]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([ID])' />
+      </column>
+      <column caption='Education' datatype='integer' name='[EDUCATION]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Limit Bal' datatype='real' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+      <column caption='Marriage' datatype='integer' name='[MARRIAGE]' role='measure' type='quantitative' />
+      <column caption='Pay Amt1' datatype='real' name='[PAY_AMT1]' role='measure' type='quantitative' />
+      <column caption='Pay Amt2' datatype='real' name='[PAY_AMT2]' role='measure' type='quantitative' />
+      <column caption='Pay Amt3' datatype='real' name='[PAY_AMT3]' role='measure' type='quantitative' />
+      <column caption='Pay Amt4' datatype='real' name='[PAY_AMT4]' role='measure' type='quantitative' />
+      <column caption='Pay Amt5' datatype='real' name='[PAY_AMT5]' role='measure' type='quantitative' />
+      <column caption='Pay Amt6' datatype='real' name='[PAY_AMT6]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Pay 0&quot;' value='Sep 2005' />
+          <alias key='&quot;Pay 2&quot;' value='Aug 2005' />
+          <alias key='&quot;Pay 3&quot;' value='Jul 2005' />
+          <alias key='&quot;Pay 4&quot;' value='Jun 2005' />
+          <alias key='&quot;Pay 5&quot;' value='May 2005' />
+          <alias key='&quot;Pay 6&quot;' value='Apr 2005' />
+        </aliases>
+      </column>
+      <column caption='PAY_Status' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+      <column caption='UCI_Credit_Card_RP.csv' datatype='table' name='[__tableau_internal_object_id__].[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]' role='measure' type='quantitative' />
+      <column caption='Default.Payment.Next.Month' datatype='integer' name='[default.payment.next.month]' role='dimension' type='quantitative' />
+      <column-instance column='[AGE]' derivation='Avg' name='[avg:AGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[LIMIT_BAL]' derivation='Avg' name='[avg:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[AGE]' derivation='Count' name='[cnt:AGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[AGE]' derivation='CountD' name='[ctd:AGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT1]' derivation='CountD' name='[ctd:BILL_AMT1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT2]' derivation='CountD' name='[ctd:BILL_AMT2:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT3]' derivation='CountD' name='[ctd:BILL_AMT3:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT4]' derivation='CountD' name='[ctd:BILL_AMT4:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ID]' derivation='CountD' name='[ctd:ID:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[LIMIT_BAL]' derivation='CountD' name='[ctd:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[AGE]' derivation='None' name='[none:AGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2173251829891075]' derivation='None' name='[none:Calculation_2173251829891075:nk]' pivot='key' type='nominal' />
+      <column-instance column='[ID]' derivation='CountD' name='[pcto:ctd:ID:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[AGE]' derivation='Sum' name='[sum:AGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT1]' derivation='Sum' name='[sum:BILL_AMT1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT2]' derivation='Sum' name='[sum:BILL_AMT2:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT3]' derivation='Sum' name='[sum:BILL_AMT3:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT4]' derivation='Sum' name='[sum:BILL_AMT4:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT5]' derivation='Sum' name='[sum:BILL_AMT5:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[BILL_AMT6]' derivation='Sum' name='[sum:BILL_AMT6:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[EDUCATION]' derivation='Sum' name='[sum:EDUCATION:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[LIMIT_BAL]' derivation='Sum' name='[sum:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MARRIAGE]' derivation='Sum' name='[sum:MARRIAGE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PAY_AMT1]' derivation='Sum' name='[sum:PAY_AMT1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PAY_AMT2]' derivation='Sum' name='[sum:PAY_AMT2:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PAY_AMT3]' derivation='Sum' name='[sum:PAY_AMT3:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PAY_AMT4]' derivation='Sum' name='[sum:PAY_AMT4:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2173251830030341]' derivation='User' name='[usr:Calculation_2173251830030341:qk:4]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' />
+      </column-instance>
+      <column-instance column='[AGE]' derivation='Var' name='[var:AGE:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/v/Documents/マイ Tableau リポジトリ/ワークブック/credit-card-usage/dashboards/Credit Card Usage.twb Files/Data/データ ソース/#TableauTemp_16s7sam1jrz93i10c1may1r7fa2i.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/05/2026 01:48:40 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>66779</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LIMIT_BAL</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[LIMIT_BAL]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LIMIT_BAL</remote-alias>
+              <ordinal>1</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>130</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SEX</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SEX]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SEX</remote-alias>
+              <ordinal>2</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EDUCATION</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EDUCATION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EDUCATION</remote-alias>
+              <ordinal>3</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MARRIAGE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[MARRIAGE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MARRIAGE</remote-alias>
+              <ordinal>4</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AGE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AGE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AGE</remote-alias>
+              <ordinal>5</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT1</remote-alias>
+              <ordinal>6</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52832</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT2</remote-alias>
+              <ordinal>7</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47189</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT3</remote-alias>
+              <ordinal>8</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42290</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT4</remote-alias>
+              <ordinal>9</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42092</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT5</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT5]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT5</remote-alias>
+              <ordinal>10</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47154</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BILL_AMT6</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[BILL_AMT6]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BILL_AMT6</remote-alias>
+              <ordinal>11</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42965</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT1</remote-alias>
+              <ordinal>12</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15342</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT2</remote-alias>
+              <ordinal>13</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15816</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT3</remote-alias>
+              <ordinal>14</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14782</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT4]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT4</remote-alias>
+              <ordinal>15</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13720</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT5</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT5]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT5</remote-alias>
+              <ordinal>16</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15103</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PAY_AMT6</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PAY_AMT6]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PAY_AMT6</remote-alias>
+              <ordinal>17</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12869</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>default.payment.next.month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[default.payment.next.month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>default.payment.next.month</remote-alias>
+              <ordinal>18</ordinal>
+              <family>UCI_Credit_Card_RP.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Pivot</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:EDUCATION:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[avg:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[cnt:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[var:AGE:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:BILL_AMT3:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT3:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_2:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_2:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[avg:LIMIT_BAL:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:LIMIT_BAL:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:LIMIT_BAL:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:BILL_AMT4:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT4:qk]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_AMT2:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_AMT4:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_6:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT5:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_3:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_4:qk]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_AMT1:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_AMT3:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:MARRIAGE:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT6:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:BILL_AMT1:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:ID:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[pcto:ctd:ID:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT1:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_5:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[cnt:PAY_0:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:PAY_0:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_0:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:PAY_0:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:BILL_AMT2:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT2:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_2173251829891075:nk]' type='palette'>
+            <map to='#1d9e75'>
+              <bucket>&quot;On time / early&quot;</bucket>
+            </map>
+            <map to='#a32d2d'>
+              <bucket>&quot;3+ mo delay&quot;</bucket>
+            </map>
+            <map to='#d85a30'>
+              <bucket>&quot;1–2 mo delay&quot;</bucket>
+            </map>
+            <map to='#ef9f27'>
+              <bucket>&quot;Partially paid&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='UCI_Credit_Card_RP.csv' id='UCI_Credit_Card_RP.csv_9E34656ED8154D4CAC34BF514EEB21D4'>
+            <properties context=''>
+              <relation name='Pivot' type='pivot'>
+                <columns>
+                  <column datatype='string' name='Pivot Field Names' />
+                  <column datatype='integer' name='Pivot Field Values' />
+                </columns>
+                <tag name='Pivot Field Names'>
+                  <value name='[Pay 0]' />
+                  <value name='[Pay 2]' />
+                  <value name='[Pay 3]' />
+                  <value name='[Pay 4]' />
+                  <value name='[Pay 5]' />
+                  <value name='[Pay 6]' />
+                </tag>
+                <groups>
+                  <group name='Pivot Field Values'>
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_0]' />
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_2]' />
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_3]' />
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_4]' />
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_5]' />
+                    <field name='[UCI_Credit_Card_RP.csv].[PAY_6]' />
+                  </group>
+                </groups>
+                <relation connection='textscan.0i630580zbp8o31gx3czr086jr1f' name='UCI_Credit_Card_RP.csv' table='[UCI_Credit_Card_RP#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                    <column datatype='integer' name='ID' ordinal='0' />
+                    <column datatype='real' name='LIMIT_BAL' ordinal='1' />
+                    <column datatype='integer' name='SEX' ordinal='2' />
+                    <column datatype='integer' name='EDUCATION' ordinal='3' />
+                    <column datatype='integer' name='MARRIAGE' ordinal='4' />
+                    <column datatype='integer' name='AGE' ordinal='5' />
+                    <column datatype='integer' name='PAY_0' ordinal='6' />
+                    <column datatype='integer' name='PAY_2' ordinal='7' />
+                    <column datatype='integer' name='PAY_3' ordinal='8' />
+                    <column datatype='integer' name='PAY_4' ordinal='9' />
+                    <column datatype='integer' name='PAY_5' ordinal='10' />
+                    <column datatype='integer' name='PAY_6' ordinal='11' />
+                    <column datatype='real' name='BILL_AMT1' ordinal='12' />
+                    <column datatype='real' name='BILL_AMT2' ordinal='13' />
+                    <column datatype='real' name='BILL_AMT3' ordinal='14' />
+                    <column datatype='real' name='BILL_AMT4' ordinal='15' />
+                    <column datatype='real' name='BILL_AMT5' ordinal='16' />
+                    <column datatype='real' name='BILL_AMT6' ordinal='17' />
+                    <column datatype='real' name='PAY_AMT1' ordinal='18' />
+                    <column datatype='real' name='PAY_AMT2' ordinal='19' />
+                    <column datatype='real' name='PAY_AMT3' ordinal='20' />
+                    <column datatype='real' name='PAY_AMT4' ordinal='21' />
+                    <column datatype='real' name='PAY_AMT5' ordinal='22' />
+                    <column datatype='real' name='PAY_AMT6' ordinal='23' />
+                    <column datatype='integer' name='default.payment.next.month' ordinal='24' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Age'>
+      <repository-location id='Age' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column datatype='integer' name='[AGE]' role='measure' type='quantitative' />
+            <column-instance column='[AGE]' derivation='Avg' name='[avg:AGE:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[avg:AGE:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='false' fontalignment='0' fontcolor='#606b76' fontname='Tableau Semibold' fontsize='9'>Avg Client Age</run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='24'><![CDATA[<[federated.1hfbbm318rwgsq132p9ae0bv6li8].[avg:AGE:qk]> yrs]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='36' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{05350B6E-76A7-48B1-8A71-F02BC7E5F6F0}' />
+    </worksheet>
+    <worksheet name='Avg Repayment Rate'>
+      <repository-location id='AvgRepaymentRate' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Risk Tier' datatype='string' name='[Calculation_2173251829891075]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values] &lt;= -1 THEN &quot;On time / early&quot;&#13;&#10;ELSEIF [Pivot Field Values] = 0 THEN &quot;Partially paid&quot;&#13;&#10;ELSEIF [Pivot Field Values] &lt;= 2 THEN &quot;1–2 mo delay&quot;&#13;&#10;ELSE &quot;3+ mo delay&quot;&#13;&#10;END' />
+            </column>
+            <column caption='% of Clients' datatype='real' name='[Calculation_2173251830030341]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([ID]) / TOTAL(COUNT([ID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Month' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Pay 0&quot;' value='Sep 2005' />
+                <alias key='&quot;Pay 2&quot;' value='Aug 2005' />
+                <alias key='&quot;Pay 3&quot;' value='Jul 2005' />
+                <alias key='&quot;Pay 4&quot;' value='Jun 2005' />
+                <alias key='&quot;Pay 5&quot;' value='May 2005' />
+                <alias key='&quot;Pay 6&quot;' value='Apr 2005' />
+              </aliases>
+            </column>
+            <column caption='PAY_Status' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2173251829891075]' derivation='None' name='[none:Calculation_2173251829891075:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2173251830030341]' derivation='User' name='[usr:Calculation_2173251830030341:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2173251829891075:nk]' member='&quot;On time / early&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;On time / early&quot;</bucket>
+              <bucket>&quot;Partially paid&quot;</bucket>
+              <bucket>&quot;1–2 mo delay&quot;</bucket>
+              <bucket>&quot;3+ mo delay&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Pay 6&quot;</bucket>
+              <bucket>&quot;Pay 5&quot;</bucket>
+              <bucket>&quot;Pay 4&quot;</bucket>
+              <bucket>&quot;Pay 3&quot;</bucket>
+              <bucket>&quot;Pay 2&quot;</bucket>
+              <bucket>&quot;Pay 0&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' value='p0.0%' />
+            <format attr='text-format' data-class='subtotal' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-field' value='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]</rows>
+        <cols>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]</cols>
+      </table>
+      <simple-id uuid='{D2776A26-60E4-46F8-BCAC-2F1374FDAB26}' />
+    </worksheet>
+    <worksheet name='Client'>
+      <repository-location id='Client' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column-instance column='[ID]' derivation='CountD' name='[ctd:ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='false' fontalignment='0' fontcolor='#606b76' fontname='Tableau Semibold' fontsize='9'>Total Clients</run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='24'><![CDATA[<[federated.1hfbbm318rwgsq132p9ae0bv6li8].[ctd:ID:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='36' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{42F6A7A2-5C68-4E6A-9CF7-6CED8A92063C}' />
+    </worksheet>
+    <worksheet name='Demographic'>
+      <repository-location id='Demographic' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column datatype='integer' name='[SEX]' role='measure' type='quantitative' />
+            <column-instance column='[SEX]' derivation='None' name='[none:SEX:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:SEX:qk]' included-values='in-range'>
+            <min>1</min>
+          </filter>
+          <slices>
+            <column>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:SEX:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E6E81DC5-7541-4883-8C53-542478E08335}' />
+    </worksheet>
+    <worksheet name='Limit'>
+      <repository-location id='Limit' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Avg Credit Limit' datatype='real' default-format='*Rp #,##0,, &quot;jt&quot;;-&quot;Rp #,##0,,, &quot;M&quot;' name='[Calculation_2173251818893313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([LIMIT_BAL])' />
+            </column>
+            <column caption='Limit Bal' datatype='real' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2173251818893313]' derivation='User' name='[usr:Calculation_2173251818893313:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818893313:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='false' fontalignment='0' fontcolor='#606b76' fontname='Tableau Semibold' fontsize='9'>Avg Credit Limit</run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='24'><![CDATA[<[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818893313:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#818b91' fontname='Tableau Light' fontsize='8'>per client</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='36' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2CD3374E-83AA-409F-B032-AD6D6F0528C4}' />
+    </worksheet>
+    <worksheet name='Repayment Health'>
+      <repository-location id='RepaymentHealth' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Risk Tier' datatype='string' name='[Calculation_2173251829891075]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values] &lt;= -1 THEN &quot;On time / early&quot;&#13;&#10;ELSEIF [Pivot Field Values] = 0 THEN &quot;Partially paid&quot;&#13;&#10;ELSEIF [Pivot Field Values] &lt;= 2 THEN &quot;1–2 mo delay&quot;&#13;&#10;ELSE &quot;3+ mo delay&quot;&#13;&#10;END' />
+            </column>
+            <column caption='% of Clients' datatype='real' name='[Calculation_2173251830030341]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([ID]) / TOTAL(COUNT([ID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Month' datatype='string' name='[Pivot Field Names]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Pay 0&quot;' value='Sep 2005' />
+                <alias key='&quot;Pay 2&quot;' value='Aug 2005' />
+                <alias key='&quot;Pay 3&quot;' value='Jul 2005' />
+                <alias key='&quot;Pay 4&quot;' value='Jun 2005' />
+                <alias key='&quot;Pay 5&quot;' value='May 2005' />
+                <alias key='&quot;Pay 6&quot;' value='Apr 2005' />
+              </aliases>
+            </column>
+            <column caption='PAY_Status' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2173251829891075]' derivation='None' name='[none:Calculation_2173251829891075:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Names]' derivation='None' name='[none:Pivot Field Names:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2173251830030341]' derivation='User' name='[usr:Calculation_2173251830030341:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <manual-sort column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;On time / early&quot;</bucket>
+              <bucket>&quot;Partially paid&quot;</bucket>
+              <bucket>&quot;1–2 mo delay&quot;</bucket>
+              <bucket>&quot;3+ mo delay&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Pay 6&quot;</bucket>
+              <bucket>&quot;Pay 5&quot;</bucket>
+              <bucket>&quot;Pay 4&quot;</bucket>
+              <bucket>&quot;Pay 3&quot;</bucket>
+              <bucket>&quot;Pay 2&quot;</bucket>
+              <bucket>&quot;Pay 0&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' value='p0.0%' />
+            <format attr='text-format' data-class='subtotal' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' value='p0.00%' />
+            <format attr='width' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]' value='98' />
+            <format attr='height' value='121' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' />
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-field' value='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk]' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]</cols>
+      </table>
+      <simple-id uuid='{5C1C7918-71A3-45E5-987C-5AEF415E79F8}' />
+    </worksheet>
+    <worksheet name='Risk Tier'>
+      <repository-location id='RiskTier' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Default rate' datatype='real' name='[Calculation_2173251818336256]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [default.payment.next.month] = 1 THEN 1 ELSE 0 END) &#13;&#10;/ &#13;&#10;COUNT([ID])' />
+            </column>
+            <column caption='Avg Credit Limit' datatype='real' default-format='*Rp #,##0,, &quot;jt&quot;;-&quot;Rp #,##0,,, &quot;M&quot;' name='[Calculation_2173251818893313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([LIMIT_BAL])' />
+            </column>
+            <column caption='Risk Tier' datatype='string' name='[Calculation_2173251829891075]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values] &lt;= -1 THEN &quot;On time / early&quot;&#13;&#10;ELSEIF [Pivot Field Values] = 0 THEN &quot;Partially paid&quot;&#13;&#10;ELSEIF [Pivot Field Values] &lt;= 2 THEN &quot;1–2 mo delay&quot;&#13;&#10;ELSE &quot;3+ mo delay&quot;&#13;&#10;END' />
+            </column>
+            <column caption='% of Clients' datatype='real' name='[Calculation_2173251830030341]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([ID]) / TOTAL(COUNT([ID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Client Count' datatype='integer' name='[Calculation_2173251835830284]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([ID])' />
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Limit Bal' datatype='real' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column caption='PAY_Status' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column caption='Default.Payment.Next.Month' datatype='integer' name='[default.payment.next.month]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_2173251829891075]' derivation='None' name='[none:Calculation_2173251829891075:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2173251818336256]' derivation='User' name='[usr:Calculation_2173251818336256:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2173251818893313]' derivation='User' name='[usr:Calculation_2173251818893313:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2173251830030341]' derivation='User' name='[usr:Calculation_2173251830030341:qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_2173251835830284]' derivation='User' name='[usr:Calculation_2173251835830284:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818893313:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk:4]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251835830284:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818893313:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk:4]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]' value='95' />
+            <format attr='text-format' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' value='p0.0%' />
+            <format attr='text-format' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251830030341:qk:4]' value='p0.0%' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.20000000000000001' field='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' num-steps='5' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' />
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</rows>
+        <cols>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{11883F21-5B5C-48AD-AD92-1FF0117ADE3E}' />
+    </worksheet>
+    <worksheet name='Scatter Plot'>
+      <repository-location id='ScatterPlot' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Bill Amt1' datatype='real' name='[BILL_AMT1]' role='measure' type='quantitative' />
+            <column caption='Risk Tier' datatype='string' name='[Calculation_2173251829891075]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Pivot Field Values] &lt;= -1 THEN &quot;On time / early&quot;&#13;&#10;ELSEIF [Pivot Field Values] = 0 THEN &quot;Partially paid&quot;&#13;&#10;ELSEIF [Pivot Field Values] &lt;= 2 THEN &quot;1–2 mo delay&quot;&#13;&#10;ELSE &quot;3+ mo delay&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Limit Bal' datatype='real' name='[LIMIT_BAL]' role='measure' type='quantitative' />
+            <column caption='PAY_Status' datatype='integer' name='[Pivot Field Values]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2173251829891075]' derivation='None' name='[none:Calculation_2173251829891075:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ID]' derivation='None' name='[none:ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[BILL_AMT1]' derivation='Sum' name='[sum:BILL_AMT1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LIMIT_BAL]' derivation='Sum' name='[sum:LIMIT_BAL:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-color' id='refline0' value='#818b91' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-color' id='refline1' value='#606b76' />
+            <format attr='line-visibility' id='refline1' value='on' />
+            <format attr='line-pattern-only' id='refline1' value='dashed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' />
+              <lod column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]' />
+            </encodings>
+            <reference-line axis-column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:LIMIT_BAL:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:LIMIT_BAL:qk]' z-order='1' />
+            <reference-line axis-column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT1:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT1:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-transparency' value='103' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:BILL_AMT1:qk]</rows>
+        <cols>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[sum:LIMIT_BAL:qk]</cols>
+      </table>
+      <simple-id uuid='{642BC0AB-EB9B-431A-BEE7-6F90EA29F3A7}' />
+    </worksheet>
+    <worksheet name='Top KPI'>
+      <repository-location id='TopKPI' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='UCI_Credit_Card_RP' name='federated.1hfbbm318rwgsq132p9ae0bv6li8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hfbbm318rwgsq132p9ae0bv6li8'>
+            <column caption='Default rate' datatype='real' name='[Calculation_2173251818336256]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [default.payment.next.month] = 1 THEN 1 ELSE 0 END) &#13;&#10;/ &#13;&#10;COUNT([ID])' />
+            </column>
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Default.Payment.Next.Month' datatype='integer' name='[default.payment.next.month]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_2173251818336256]' derivation='User' name='[usr:Calculation_2173251818336256:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='false' fontalignment='0' fontcolor='#606b76' fontname='Tableau Semibold' fontsize='9'>Default Rate</run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#000000' fontname='Tableau Bold' fontsize='24'><![CDATA[<[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run bold='false' fontalignment='0' fontcolor='#a7acad' fontname='Tableau Light' fontsize='8'>next-month prediction</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-size' value='36' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#4e79a7' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{AA19A463-BDB7-4997-971F-C5DD2BC183D2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location id='Dashboard1' path='/workbooks/CreditCardUsage_17911914509880' revision='' />
+      <style />
+      <size maxheight='800' maxwidth='1200' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='12251' id='5' param='vert' type-v2='layout-flow' w='98666' x='667' y='86749'>
+            <zone fixed-size='144' h='12251' id='19' is-fixed='true' name='Risk Tier' pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' type-v2='color' w='98666' x='667' y='86749'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='14517' id='6' name='Top KPI' show-title='false' w='24667' x='667' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='14517' id='7' name='Age' show-title='false' w='24667' x='74666' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='14517' id='8' name='Limit' show-title='false' w='24666' x='50000' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='14517' id='9' name='Client' show-title='false' w='24666' x='25334' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='32375' id='12' param='vert' type-v2='layout-flow' w='49333' x='50000' y='54374'>
+            <zone h='32375' id='20' name='Scatter Plot' w='49333' x='50000' y='54374'>
+              <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='4374' id='13' param='vert' type-v2='layout-flow' w='98666' x='667' y='50000' />
+          <zone h='34483' id='14' param='vert' type-v2='layout-flow' w='48250' x='51083' y='15517'>
+            <zone h='34483' id='17' name='Avg Repayment Rate' w='48250' x='51083' y='15517'>
+              <layout-cache minheight='184' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='28232' id='15' name='Repayment Health' w='50416' x='667' y='15517'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='32375' id='18' name='Risk Tier' w='49333' x='667' y='54374'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='6251' id='16' name='Repayment Health' pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' type-v2='color' w='50416' x='667' y='43749'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5ead7' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='25' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+                <zone fixed-size='108' h='14517' id='6' is-fixed='true' name='Top KPI' show-title='false' w='24667' x='667' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='108' h='14517' id='9' is-fixed='true' name='Client' show-title='false' w='24666' x='25334' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='108' h='14517' id='8' is-fixed='true' name='Limit' show-title='false' w='24666' x='50000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='108' h='14517' id='7' is-fixed='true' name='Age' show-title='false' w='24667' x='74666' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='218' h='28232' id='15' is-fixed='true' name='Repayment Health' w='50416' x='667' y='15517'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6251' id='16' name='Repayment Health' pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' type-v2='color' w='50416' x='667' y='43749'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='268' h='34483' id='17' is-fixed='true' name='Avg Repayment Rate' w='48250' x='51083' y='15517'>
+                  <layout-cache minheight='184' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='251' h='32375' id='18' is-fixed='true' name='Risk Tier' w='49333' x='667' y='54374'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='144' h='12251' id='19' name='Risk Tier' pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' type-v2='color' w='98666' x='667' y='86749'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='251' h='32375' id='20' is-fixed='true' name='Scatter Plot' w='49333' x='50000' y='54374'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5ead7' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B231BC01-A430-44E6-802D-F28DD646C6EA}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Age'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Avg Repayment Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Client'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Limit'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Repayment Health'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Risk Tier' />
+        <viewpoint name='Scatter Plot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top KPI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A6A301C8-4FE2-43E0-B350-A99EFA53FFF7}' />
+    </window>
+    <window class='worksheet' name='Top KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_0:qk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{AC00AA4E-6D71-4049-8DEF-2DC47867E985}' />
+    </window>
+    <window class='worksheet' name='Client'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_0:qk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8DA79396-1212-49E4-B9E1-4D1C2A1D9834}' />
+    </window>
+    <window class='worksheet' name='Limit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_0:qk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7C8138FB-6A59-4F04-96F9-568AE08708EB}' />
+    </window>
+    <window class='worksheet' name='Age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_0:qk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:PAY_2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B06D0CF6-DF75-43DF-866A-DB75FDE584D5}' />
+    </window>
+    <window class='worksheet' name='Repayment Health'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A6E33721-BCF0-43D5-8B6B-E5157F12DB8B}' />
+    </window>
+    <window class='worksheet' name='Avg Repayment Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Pivot Field Names:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F2552427-1919-43BF-AFDB-AA9E3C97DCE7}' />
+    </window>
+    <window class='worksheet' name='Risk Tier'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[usr:Calculation_2173251818336256:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[:Measure Names]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0FF861CF-5738-449A-8AD0-08A4A3CE7AF6}' />
+    </window>
+    <window class='worksheet' name='Scatter Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:Calculation_2173251829891075:nk]</field>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:ID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{81080BC0-E031-4CEA-8A32-8D5ABABE2A05}' />
+    </window>
+    <window class='worksheet' name='Demographic'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:SEX:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1hfbbm318rwgsq132p9ae0bv6li8].[none:SEX:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{672F84B6-6D3D-4DDF-BCC0-E778F881C016}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
